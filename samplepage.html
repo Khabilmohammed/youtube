@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        .twitter-btn{
+            background-color: blue;
+            color: white;
+            border:none;
+            height: 30px;
+            width: 120px;
+            border-radius: 10cm;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+    
+        .add-to-cart{
+            background-color: rgb(243, 221, 20);
+            height: 30px;
+            width: 150px;
+            border: none;
+            border-radius: 15px;
+            color: black;
+            font-weight: bold;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+    
+        .add-to-cart:hover{
+            opacity: 0.7;
+        }
+        .add-to-cart:active{
+            opacity: 0.4;
+        }
+        .sign-up-btn{
+            color: white;
+            background-color: green;
+            width: 120px;
+            height: 30px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: box-shadow 0.5s;
+           
+            
+        }
+        .sign-up-btn:hover{
+            box-shadow: 3px 5px 10px rgba(55, 10, 5, 0.99);
+        }
+        .sign-up-btn:active{
+            background-color: white;
+            color: green;
+        }
+        .price{
+            color: green;
+            font-weight: bolder;
+    
+        }
+        .para{
+            font-size: larger;
+            font-weight: bold;
+        }
+        .cart-btn{
+            border-radius: 4px;
+            background-color: rgb(248, 196, 24);
+            color: black;
+            height: 40px;
+            width: 140px;
+            border: none;
+            font-weight: 900;
+            cursor: pointer;
+        }
+        .cart-btn:hover{
+            opacity: 0.8;
+        }
+        .cart-btn:active{
+            opacity: 0.5;
+        }
+        .buy-btn{
+            color: black;
+            height: 40px;
+            width: 140px;
+            border: none;
+            border-radius: 4px;
+            background-color: orange;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .buy-btn:hover{
+            background-color: rgb(243, 111, 4);
+            box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15);
+        }
+        .buy-btn:active{
+            opacity: 0.7;
+        }
+        .vidio-head{
+            font-family: arial;
+            font-weight: bold;
+            font-size: 20px;
+            width: 350px;
+            line-height: 25px;
+            color: rgba(0, 0, 0, 0.829);
+            margin-bottom: 3px;
+    
+        }
+        .vidio-sub-head{
+            color: rgba(128, 128, 128, 0.89);
+            margin-top: 0;
+            margin-bottom: 18px;
+        }
+        .name-crt{
+            color: rgba(68, 66, 66, 0.753);
+            margin-top: 0px;
+            font-weight: bold;
+            font-family: arial;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .vidio-para{
+            font-family:'arial';
+            line-height: 20px;
+            width: 350px;
+            margin-top: 0px;
+            color: rgb(82, 81, 81);
+            font-size: 15px;
+            margin-bottom: 150px;
+    
+        }
+        .shop{
+            font-family: arial; 
+            background-color: rgb(206, 15, 15);
+            padding-top: 18px;
+            padding-bottom: 18px;
+            padding-left: 120px;
+            font-size: 16px;
+            color: white;
+            margin-top: 0;
+            margin-bottom: 50px;
+            
+        }
+        .example-span{
+            cursor: pointer;
+            margin-left: 9px;
+        }
+    
+        .example-span:hover{
+            text-decoration: underline;
+    
+        }
+        .usd-money{
+            margin-top:0 ;
+            font-size: 30px;
+            margin-bottom: 5px;
+    
+    
+        }
+        .usd-span{
+            color: grey;
+            font-size: 15px;
+        }
+        .today-usd{
+            color: green;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .hour-para{
+            color: grey;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+        .hour-span{
+            color: red;
+           
+        }
+        .image-1{
+            margin-top: 0;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 100px;
+            display: block;
+        }
+
+        .google-img{
+            display: block;
+            width: 400px;
+            margin-left: 100px;
+            margin-bottom: 0;
+           
+        }
+        
+        .txt-google{
+            margin-top: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 120px;
+            padding-left: 20px;
+            padding-right: 30px;
+            border-radius: 12px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.10);
+            border: none;
+            width: 300px;
+            background-color: whitesmoke;
+            margin-bottom: 50px;
+            display: block;
+            
+           
+        }
+        .new-div{
+            margin-top: 0;
+            background-color: whitesmoke;
+            display: inline-block;
+            margin-left: 13px;
+            padding-bottom: 17px;
+            border-radius: 10px;
+        }
+
+        .image-div{
+            
+            object-fit: cover;
+            width: 250px;
+            margin-bottom: 10px;
+        }
+        .div-txt{
+            margin-top: 0;
+            font-family: arial;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 13px;
+        }
+        .mutual-frend{
+            margin-top: 0;
+            color: grey;
+        }
+        .div-btn{
+            background-color: rgba(18, 139, 252, 0.911);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 15px;
+            border: none;
+        }
+    
+        
+      
+    </style>
+</head>
+<body>
+    <p>hi hoow geg </p>
+    <button name="hi">click this one</button>
+    <button class="twitter-btn">twitter</button>
+    <button class="add-to-cart">Add to Cart</button>
+    <button class="sign-up-btn">Sign up</button>
+    <br><br><br>
+    <a href="#">Back to Amazon</a>
+    <br>
+    <H1>Nike Black Running Shoes</H1>
+    <br>
+   
+    <h2 class="price">$39 - in stock.</h2>
+    <br>
+    <p class="para">Free delivery tomorrow.</p>
+    <button class="cart-btn">Add to cart</button>
+
+    <button class="buy-btn">Buy now</button><br><br><br>
+    <p class="vidio-head">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+    <p class="vidio-sub-head">3.4M views &#x2022; 6 months ago</p>
+    <p class="name-crt">Marques Brownlee &#10003; </p>
+    <p class="vidio-para">Talking tech and AI on the heels of google I/O. Also a daily driver phone reveals from google's CEO.Shoutout to Sundar.</p>
+
+
+  
+
+    <p class="shop">Shop early for the best selection of holiday favourite.<span class="example-span">Shop now &#62;</span></p>
+    <p class="usd-money">1,049.61 <span class="usd-span">USD<span></p>
+    <p class="today-usd"> +18.05(1.75%) today</p>
+    <p class="hour-para">After hour 1,048.00 <span class="hour-span"> -1.61(0.15%)</span></p>
+    <img src="olivier-collet-JMwCe3w7qKk-unsplash.jpg" alt="" class="image-1">
+    <img src="unnamed.webp" alt=""class="google-img">
+    <input type="text" class="txt-google" placeholder="Search Google or type a URL">
+    
+    <div class="new-div">
+        <img src="hq720.webp" class="image-div">
+        <p class="div-txt">Oliver</p>
+        <p class="mutual-frend">Two mutual friends</p>
+        <button class="div-btn">Add friends</button>
+    </div>
+    <div class="new-div">
+        <img src="hq720.webp" class="image-div">
+        <p class="div-txt">Oliver</p>
+        <p class="mutual-frend">Two mutual friends</p>
+        <button class="div-btn">Add friends</button>
+    </div>
+
+</body>
+</html>

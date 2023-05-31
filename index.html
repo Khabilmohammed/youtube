@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,400&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+            padding-top: 60px;
+            margin-left: 70px;
+            margin-right: 40px;
+            background-color: rgb(253, 248, 248);
+        }
+        .utube-1{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            
+        }
+        .outer{
+            display: grid;
+            grid-template-columns: 50px 1fr;
+            
+            
+        }
+        .vidio-head{
+            margin-top: 0; 
+            margin-bottom: 8px;
+        }
+        .channel-pic{
+            width: 35px;
+           object-fit: cover;
+           font-size: 2px;
+        }
+        .vidio-sub-head{
+            margin-top: 0;
+            margin-bottom: 8px;
+            
+        }
+        .vidio-para{
+            margin-top: 0;
+           
+        }
+        .img{
+            margin-top: 0;
+            margin-bottom: 10px;
+            width: 35px;
+            border-radius: 20px;
+        }
+        .vidio-head{
+            font-family: roboto;
+            
+            font-size: 18px;
+           
+            line-height: 25px;
+            color: rgba(0, 0, 0, 0.829);
+            margin-bottom: 6px;
+        }
+        .vidio-sub-head{
+            color: rgba(128, 128, 128, 0.89);
+            margin-top: 0;
+            margin-bottom: 9px;
+        }
+        .name-crt{
+            color: rgba(68, 66, 66, 0.753);
+            margin-top: 0px;
+            font-weight: bold;
+            font-family: roboto;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+        .vidio-para{
+            font-family:'arial';
+            line-height: 20px;
+            margin-top: 0px;
+            color: rgb(82, 81, 81);
+            font-size: 15px;
+            margin-bottom: 150px;    
+            }  
+            .header{
+                height: 56px;
+               
+                top: 0px;
+                right: 0px;
+                left: 0px;
+                
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                position: fixed;
+                background-color: white;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: rgb(243, 243, 243);
+                z-index: 200;
+                
+            }
+            .start-section{
+                display: flex;       
+                align-items: center;
+            }
+            .hamburger-logo{
+                width: 24px;
+                height: 24px;
+                margin-left: 18px;
+                margin-right: 15px;
+                
+            }
+            .youtube-logo{
+                width: 90px;
+                height: 19px;
+            }
+            .middel-section{
+                display: flex;
+                align-items: center;
+                flex: 1;
+              
+                margin-right:40px ;
+                margin-left: 55px;
+                max-width: 900px;
+            }
+            .search-bar{
+                margin-left: 9px;
+                height: 30px;
+                flex: 1;
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgb(180, 178, 178);
+                border-radius: 7px;
+                padding-left: 12px;
+                font-size: 15px;
+                box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.225);
+                width: 0;
+                outline: none;
+                
+            }
+            .search-bar::placeholder{
+                font-family: Arial;
+                font-size: 15px;
+               
+            }
+
+            .search-bar-btn{
+                width: 40px;
+                height: 34px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgb(180, 178, 178);
+                border-radius: 4px;
+                margin-left: -7px;
+               
+            }
+
+            .search-icon{
+                width: 30px;
+                height: 25px;
+               
+            }
+            .voice-bar-icon{
+                width: 20px;
+                height: 20px;
+            }
+            .voice-search-btn{
+                width: 35px;
+                height: 35px;
+                border-style: none;
+                border-radius: 25px;
+                border-color: rgb(180, 178, 178);
+                margin-left: 5px;
+            }
+            .end-section{
+                width: 200px;
+                margin-right: 19px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-shrink: 0px;
+            }
+            .apps-icon{
+               height: 25px;
+            }
+            .channel-icon{
+                
+                height: 20px;
+                
+                border-radius: 16px;
+            }
+           
+            .time-display{
+                position: absolute;
+                color: white;
+                background-color: rgb(29, 29, 29);
+                bottom: 10px;
+                right: 8px;
+                border-radius: 3px;
+                font-size: 13px;
+                font-weight: 500;
+                padding: 4px;
+                font-family: roboto;
+                
+                
+            }
+            .thambnile-image{
+                position: relative;
+                
+            }
+            .sidebar{
+               
+                position: fixed;
+                width: 65px;
+                left: 0;
+                bottom: 0;
+                top: 56px;
+                z-index: 200;
+
+            }
+
+            .side-bar-box{
+                background-color: white;
+                height: 68px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+               
+                
+            }
+            .side-bar-box:hover{
+                background-color: rgb(240, 240, 240);
+            }
+            .side-bar-box img{
+                height: 25px;
+                margin-bottom: 4px;
+            }
+            .side-bar-box div{
+                font-family: roboto;
+                font-size: 11px;
+                font-weight: bold;
+            }
+            .youtube-live-header{
+                width: 23px;
+            }
+            .channel-icon-header{
+                width: 30px;
+            }
+            .home-icon-sidebar{
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+            }
+            .lower-navigation{
+                background-color: rgb(27, 27, 27);
+                display: block;
+                color: white;
+                margin-left: 10px;
+                
+            }
+            .lower-nav-bar-item{
+                font-family: roboto;
+                font-size: 14px;
+                background-color: rgba(238, 238, 238, 0.89);
+                border-radius: 9px;
+                padding: 12px;
+                color: rgb(66, 66, 66);
+                display: block;
+                margin-left: 10px;
+                text-align: center;
+                display: inline-block;              
+                white-space: nowrap;
+               
+                
+                
+                
+            }
+
+
+         </style>
+</head>
+<body>
+    <div class="header">
+        <div class="start-section">
+            <img class="hamburger-logo" src="hamburger-menu.svg" alt="">
+            <img class="youtube-logo" src="youtube-logo.svg" alt="">   
+        </div>
+        <div class="middel-section">
+            <input type="text" class="search-bar" placeholder="Search" id="">
+            <button class="search-bar-btn">
+                <img src="search.svg" class="search-icon" alt="">
+            </button>
+            <button class="voice-search-btn">
+                <img src="voice-search-icon.svg" class="voice-bar-icon" alt="">
+            </button>
+        </div>
+        <div class="end-section">
+           <img src="youtube-apps.svg" class="apps-icon" alt="">
+           <img src="icons8-notification-24.png" alt="">
+           <img src="icons8-youtube-live-50.png" class="youtube-live-header" alt="">
+           <img src="unnamed.jpg" alt="channel-icon" class="channel-icon-header">
+           
+           
+        </div>
+
+            
+        
+    </div>
+
+    <div style="display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    border-width: 3px;
+    border-style: none;
+    margin-top: 20px;
+    height: 38px;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: fixed;
+    background-color: white;
+    z-index: 5;
+    top: 36px;
+    background-color: white;
+    right: 0;
+    height: 60px;  
+    left: 55px;
+    ">
+    <div>
+        
+    </div >
+    <div class="lower-nav-bar-item">All</div>
+    <div class="lower-nav-bar-item">Web Development</div>
+    <div class="lower-nav-bar-item">computer Programming</div>
+    <div class="lower-nav-bar-item">Gaming</div>
+    <div class="lower-nav-bar-item">Music</div>
+    <div class="lower-nav-bar-item">Trailer</div>
+    <div class="lower-nav-bar-item">Tamil cinema</div>
+    <div class="lower-nav-bar-item">Mixes</div>
+    <div class="lower-nav-bar-item">comedy</div>
+    <div class="lower-nav-bar-item">Ai</div>
+    <div class="lower-nav-bar-item">Thoughts</div>
+    <div class="lower-nav-bar-item">Film</div>
+    <div class="lower-nav-bar-item">Sketch comedy</div>
+    <div class="lower-nav-bar-item">Recently uploaded</div>
+    <div class="lower-nav-bar-item">Watched</div>
+    <div class="lower-nav-bar-item">Action-adventure games</div>
+    <div class="lower-nav-bar-item">Watched</div>
+    
+    </div>
+
+    <div class="sidebar">
+        <div class="side-bar-box">
+            <img src="home-icon-614x460.png" class="home-icon-sidebar" alt="">
+            <div>Home</div>
+        </div>
+
+        <div class="side-bar-box">
+            <img src="images.png" alt="">
+            <div>Shorts</div>
+        </div>
+
+        <div class="side-bar-box">
+            <img src="icons8-explore-50.png" alt="">
+            <div>Explore</div>
+        </div>
+
+        <div class="side-bar-box">
+            <img src="icons8-video-playlist-50.png" alt="">
+            <div>Subscription</div>
+        </div>
+
+        <div class="side-bar-box">
+            <img src="icons8-youtube-50.png" alt="">
+            <div>Orginals</div>
+        </div>
+
+        <div class="side-bar-box">
+            <img src="icons8-youtube-music-50.png" alt="">
+            <div>Music</div>
+        </div>
+        <div class="side-bar-box">
+            <img src="icons8-video-playlist-50.png" alt="">
+            <div>playlist</div>
+        </div>
+    </div>
+
+
+
+    
+    <div style="display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px; margin-top: 50px; margin-left: 20px;">
+   <div class="outermost" style="margin-top: 20px; margin-right: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (1).webp" class="utube-1" alt="">
+        <div class="time-display">05:56</div>
+    </div>
+   
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed (2).jpg" class="img" alt="">
+            
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">Oppenheimer | New Trailer</p>
+        <p class="vidio-sub-head">3.4M views &#x2022; 6 months ago</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+        
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (5).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="dc (3).jpg" class="img" alt="">
+            
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">8K HDR IMAX | Batpod (The Dark Knight) | Dolby 5.1</p>
+        <p class="vidio-sub-head">3,968,390 views  &#x2022;  9 Dec 2020</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720.webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed (2).jpg" class="img" alt="">
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">Oppenheimer | New Trailer</p>
+        <p class="vidio-sub-head">3.4M views &#x2022; 6 months ago</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (2).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="marvel.jpg" class="img" alt="">
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">Oppenheimer | New Trailer</p>
+        <p class="vidio-sub-head">3.4M views &#x2022; 6 months ago</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (3).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed.jpg" class="img" alt="">
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">Oppenheimer | New Trailer</p>
+        <p class="vidio-sub-head">3.4M views &#x2022; 6 months ago</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (4).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed.jpg" class="img" alt="">
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">Oppenheimer | New Trailer</p>
+        <p class="vidio-sub-head">3.4M views &#x2022; 6 months ago</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (5).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed.jpg" class="img" alt="">
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">8K HDR IMAX | Batpod (The Dark Knight) | Dolby 5.1</p>
+        <p class="vidio-sub-head">3,968,390 views  &#x2022;  9 Dec 2020</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="extratction(6).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed (2).jpg" class="img" alt="">
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">EXTRACTION 2 | Official Trailer | Netflix</p>
+        <p class="vidio-sub-head">9.4M views &#x2022; 8 days ago</p>
+        <p class="name-crt">Netflix &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+
+
+
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="flash (6).webp" class="utube-1" alt="">
+        <div class="time-display">02.58</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed.jpg" class="img" alt="">
+            
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">The Flash - Official Trailer 2</p>
+        <p class="vidio-sub-head">3,968,390 views  &#x2022;  4 week ago</p>
+        <p class="name-crt">DC &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (5).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed.jpg" class="img" alt="">
+            
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">8K HDR IMAX | Batpod (The Dark Knight) | Dolby 5.1</p>
+        <p class="vidio-sub-head">3,968,390 views  &#x2022;  9 Dec 2020</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="endgame (6).webp" class="utube-1" alt="">
+        <div class="time-display">3.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="marvel.jpg" class="img" alt="">
+            
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">AVENGERS: ENDGAME – Official Trailer</p>
+        <p class="vidio-sub-head">5,888,390 views  &#x2022;  9 Dec 2020</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (5).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed.jpg" class="img" alt="">
+            
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">8K HDR IMAX | Batpod (The Dark Knight) | Dolby 5.1</p>
+        <p class="vidio-sub-head">3,968,390 views  &#x2022;  9 Dec 2020</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (5).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed.jpg" class="img" alt="">
+            
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">8K HDR IMAX | Batpod (The Dark Knight) | Dolby 5.1</p>
+        <p class="vidio-sub-head">3,968,390 views  &#x2022;  9 Dec 2020</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (5).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed.jpg" class="img" alt="">
+            
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">8K HDR IMAX | Batpod (The Dark Knight) | Dolby 5.1</p>
+        <p class="vidio-sub-head">3,968,390 views  &#x2022;  9 Dec 2020</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (5).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed.jpg" class="img" alt="">
+            
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">8K HDR IMAX | Batpod (The Dark Knight) | Dolby 5.1</p>
+        <p class="vidio-sub-head">3,968,390 views  &#x2022;  9 Dec 2020</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+<div class="outermost" style="margin-top: 20px;"> 
+    <div class="thambnile-image">      
+        <img src="hq720 (5).webp" class="utube-1" alt="">
+        <div class="time-display">06.00</div>
+    </div>
+    <div class="outer">
+        <div class="channel-pic">
+            <img src="unnamed.jpg" class="img" alt="">
+            
+        </div>
+        <div class="vidio-info">
+        <p class="vidio-head">8K HDR IMAX | Batpod (The Dark Knight) | Dolby 5.1</p>
+        <p class="vidio-sub-head">3,968,390 views  &#x2022;  9 Dec 2020</p>
+        <p class="name-crt">Marques Brownlee &#10003; </p>
+       
+        </div>
+       
+        
+    </div>
+</div>
+
+</div>
+
+
+</body>
+</html>
